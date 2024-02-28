@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/half-body.PNG';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import resumePDF from '../assets/pdf/resume.pdf'
+import resumePDF from '../assets/pdf/resume.pdf';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -29,7 +29,7 @@ export const NavBar = () => {
         <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
-            <img src= {logo} alt="logo"/>
+            <img src= {logo} alt="logo"/><text style={{color: "white", fontSize: 40, fontWeight:700}}>Haley Lenander</text>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -42,9 +42,9 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt = "" /></a>
+                <a href="https://www.linkedin.com/in/haley-lenander/"><img src={navIcon1} alt = "LinkedIn" /></a>
             </div>
-            <button className="vvd"><span><a href={resumePDF} target="_blank">Open Resume</a></span></button>
+            <button className="vvd"><span><a href={resumePDF} target="_blank"><text style={{color:"white"}}>Open Resume</text></a></span></button>
           </span>
         </Navbar.Collapse>
       </Container>

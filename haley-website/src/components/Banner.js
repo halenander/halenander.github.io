@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/full-body.PNG";
+import resumePDF from '../assets/pdf/resume.pdf';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Software Engineer", "Backend Developer", "Multi-Language Programmer"];
+    const toRotate = ["Haley Lenander","a Software Engineer", "a Backend Developer", "a Multi-Language Programmer"];
     const [text, setText] = useState('');
     const period = 2000;
     const [delta, setDelta] = useState(300 - Math.random()* 100);
@@ -46,9 +47,9 @@ export const Banner = () => {
             <Row className = "align-items-center">
                 <Col xs = {12} md = {6} xl = {7}>
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{`Hi I'm Haley `}<span className="wrap">{text}</span></h1>
+                    <h1>{`Hi I'm `}<span className="wrap">{text}</span></h1>
                     <p>Here is where text goes for 'About Me' section.</p>
-                    <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25} /></button>
+                    <button><span><a href={resumePDF} target="_blank"><text style={{color:"white"}}>View My Resume</text></a></span><ArrowRightCircle size={25} /></button>
                 </Col>
                 <Col xs = {12} md = {6} xl = {5}>
                     <img src={headerImg} alt="Header"/>

@@ -46,7 +46,6 @@ export const Banner = () => {
             <Container>
             <Row className = "align-items-center">
                 <Col xs = {12} md = {6} xl = {7}>
-                    <span className="tagline">Welcome to my Portfolio</span>
                     <h1>{`Hi I'm `}<span className="wrap">{text}</span></h1>
                     <p>Here is where text goes for 'About Me' section.</p>
                     <button><span><a href={resumePDF} target="_blank"><text style={{color:"white"}}>View My Resume</text></a></span><ArrowRightCircle size={25} /></button>

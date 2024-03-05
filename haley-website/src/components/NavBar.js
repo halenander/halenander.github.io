@@ -42,7 +42,7 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-                <a href="https://www.linkedin.com/in/haley-lenander/"><img src={navIcon1} alt = "LinkedIn" /></a>
+                <a href="https://www.linkedin.com/in/haley-lenander/" target="_blank"><img src={navIcon1} alt = "LinkedIn" /></a>
             </div>
             <button className="vvd"><span><a href={resumePDF} target="_blank"><text style={{color:"white"}}>Open Resume</text></a></span></button>
           </span>

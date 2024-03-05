@@ -1,42 +1,60 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import admissions from "../assets/img/admissions_webhook.png";
+import linux from "../assets/img/linux_shell.png";
+import willy from "../assets/img/pet_willy.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
 
-    const projects = [
+    const aca_projects = [
         {
             title: "Admissions Webhook",
             description: "Golang, Docker, Kubernetes, Redis",
-            imgUrl: projImg1,
+            imgUrl: admissions,
+            Url: "https://github.com/usfca-cs490-sp23/admissions-webhook",
         },
         {
             title: "Search Engine",
             description: "Java, HTML, Log4j, Bulma",
-            imgUrl: projImg2,
-        },
-        {
-            title: "Climate Change Casa",
-            description: "Python (Pygame)",
-            imgUrl: projImg3,
+            imgUrl: admissions,
         },
         {
             title: "Custom Linux Shell",
             description: "C, Linux, Makefile",
-            imgUrl: projImg1,
+            imgUrl: linux,
         },
+    ]
+
+    const post_projects = [
         {
-            title: "ByteLingo",
-            description: "JavaScript, TypeScript, CSS, HTML",
-            imgUrl: projImg2,
+            title: "Portfolio Website",
+            description: "React, Javascript, CSS, HTML",
+            imgUrl: admissions,
+            Url: "https://github.com/halenander/personal-website",
         },
         {
             title: "Escape the Pets",
             description: "C#, Unity",
-            imgUrl: projImg3,
+            imgUrl: willy,
+            Url: "https://github.com/halenander/escape_the_pets",
+        },
+    ]
+
+    const hack_projects = [
+        {
+            title: "ByteLingo",
+            description: "JavaScript, TypeScript, CSS, HTML",
+            imgUrl: willy,
+            Url: "https://github.com/hack-thvm/ByteLingo",
+        },
+        {
+            title: "Climate Change Casa",
+            description: "Python (Pygame)",
+            imgUrl: willy,
+            Url: "https://github.com/halenander/ClimateChangeCasa",
         },
     ]
 
@@ -45,25 +63,30 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Projects</h2>
-                        <p>Sample text for projects.</p>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                        <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
+                            <h1>Projects</h1>
+                            <p>Sample text for projects.</p>
+                        </div>}
+                    </TrackVisibility>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                            <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                            <Nav.Link eventKey="first">Academic Projects</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                            <Nav.Link eventKey="second">Post-Grad Projects</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                            <Nav.Link eventKey="third">Hack-a-thon Projects</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
                                 <Row>
                                     {
-                                        projects.map((project, index) => {
+                                        aca_projects.map((project, index) => {
                                             return (
                                                 <ProjectCard
                                                 key = {index}
@@ -74,8 +97,34 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">Empty Text #2</Tab.Pane>
-                            <Tab.Pane eventKey="third">Empty Text #3</Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <Row>
+                                    {
+                                        post_projects.map((project, index) => {
+                                            return (
+                                                <ProjectCard
+                                                key = {index}
+                                                {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="third">
+                            <Row>
+                                    {
+                                        hack_projects.map((project, index) => {
+                                            return (
+                                                <ProjectCard
+                                                key = {index}
+                                                {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </Row>
+                            </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>

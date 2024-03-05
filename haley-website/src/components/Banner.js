@@ -12,7 +12,7 @@ export const Banner = () => {
     const toRotate = ["Haley Lenander","a Software Engineer", "a Backend Developer", "a Multi-Language Programmer"];
     const [text, setText] = useState('');
     const period = 2000;
-    const [delta, setDelta] = useState(300 - Math.random()* 100);
+    const [delta, setDelta] = useState(300 - Math.random() * 100);
 
     useEffect(() => {
         let ticker = setInterval(() => {

@@ -1,9 +1,11 @@
 import { Container, Col, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import java from "../assets/img/java.PNG";
+import c from "../assets/img/c.PNG";
+import python from "../assets/img/python.PNG";
+import golang from "../assets/img/golang.PNG";
+import k8 from "../assets/img/k8.PNG";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
@@ -36,23 +38,27 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Here is some holder text for now</p>
+                            <p>Primary programming skills, including familiarity with languages and libraries.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="image"/>
+                                    <img src={java} alt="image"/>
                                     <h5>Java Programming</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="image"/>
+                                    <img src={python} alt="image"/>
                                     <h5>Python Programming</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="image"/>
+                                    <img src={c} alt="image"/>
                                     <h5>C Programming</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="image"/>
-                                    <h5>Docker/Kubernetes</h5>
+                                    <img src={golang} alt="image"/>
+                                    <h5>Golang Programming</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={k8} alt="image"/>
+                                    <h5>Kubernetes</h5>
                                 </div>
                             </Carousel>
                         </div>

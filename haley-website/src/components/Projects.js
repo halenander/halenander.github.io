@@ -3,6 +3,9 @@ import { ProjectCard } from "./ProjectCard";
 import admissions from "../assets/img/admissions_webhook.png";
 import linux from "../assets/img/linux_shell.png";
 import willy from "../assets/img/pet_willy.png";
+import search from "../assets/img/search_engine.png";
+import website from "../assets/img/website.png";
+import ccc from "../assets/img/ccc.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
@@ -19,7 +22,7 @@ export const Projects = () => {
         {
             title: "Search Engine",
             description: "Java, HTML, Log4j, Bulma",
-            imgUrl: admissions,
+            imgUrl: search,
         },
         {
             title: "Custom Linux Shell",
@@ -32,7 +35,7 @@ export const Projects = () => {
         {
             title: "Portfolio Website",
             description: "React, Javascript, CSS, HTML",
-            imgUrl: admissions,
+            imgUrl: website,
             Url: "https://github.com/halenander/personal-website",
         },
         {
@@ -53,7 +56,7 @@ export const Projects = () => {
         {
             title: "Climate Change Casa",
             description: "Python (Pygame)",
-            imgUrl: willy,
+            imgUrl: ccc,
             Url: "https://github.com/halenander/ClimateChangeCasa",
         },
     ]
@@ -67,7 +70,7 @@ export const Projects = () => {
                     {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                             <h1>Projects</h1>
-                            <p>Sample text for projects.</p>
+                            <p>Completed projects listed with each language used. Click to access the related github page.</p>
                         </div>}
                     </TrackVisibility>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">

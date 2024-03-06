@@ -52,7 +52,7 @@ export const Banner = () => {
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                     <h1>{`Hi I'm `}<span className="wrap">{text}</span></h1>
-                    <p>Here is where text goes for 'About Me' section.</p>
+                    <p>New Graduate Software Engineer with a passion for cybersecurity, game development, and AI.</p>
                     <button><span><a href={resumePDF} target="_blank"><text style={{color:"white"}}>View My Resume</text></a></span><ArrowRightCircle size={25} /></button>
                 </div>}
                 </TrackVisibility>
